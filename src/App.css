@@ -1,193 +1,82 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: rgb(255, 255, 255) !important;
   /* background:linear-gradient(to left, #7b4397,#dc2430) !important; */
   height: 100vh;
+  background: url("https://raw.githubusercontent.com/mizanxali/uno-online/master/client/src/assets/backgrounds/bgY.png");
 }
-html{
+html {
   scroll-behavior: smooth;
 }
-h1,h6{
+h1,
+h6 {
   padding: 0.5rem;
 }
 
-
-.header{
+.header {
   height: 10rem;
-
 }
 
+.img-fluid {
+  width: 10rem !important;
+  height: 15rem !important;
 
-/* individual cocktail display css */
-.blogcontainer{
-  margin: 1rem;
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
- 
+  transition: all 2s;
 }
-.blogcontainer2{
-  margin: 3rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 2rem;
- 
+.deck {
+  box-shadow: rgba(14, 13, 13, 0.4) 5px 5px, rgba(10, 10, 10, 0.3) 10px 10px,
+    rgba(20, 20, 20, 0.2) 15px 15px, rgba(17, 17, 17, 0.1) 20px 20px,
+    rgba(7, 7, 7, 0.05) 25px 25px;
+  border-radius: 1rem;
 }
 
-/* css for card */
-.blogcard{
- display: flex;
- justify-content: center;
- align-items: center;
- flex-direction: column;
- padding: 2rem;
- margin: 1rem;
- border: 2px solid red;
- border-radius: 1rem;
- text-decoration: none;
-}
-.blogcard:hover{
-  background-color: burlywood;
-}
-.blogcard img{
-  width: 15rem;
-  height: 15rem;
-}
-
-.topic{
-  padding: 0.2rem;
+.btn,
+.btn2 {
+  background-color: rgb(255, 0, 0) !important;
+  color: rgb(251, 255, 0) !important;
+  border-radius: 1.5rem !important;
+  transition: all 3s;
+  cursor: pointer;
+  text-align: center;
+  width: 8rem;
+  height: 2rem;
   font-size: 1rem;
-  font-weight: bold;
-  
-
-
+  font-weight: bolder;
 }
 
-Link{
-  text-decoration: none;
-}
-
-.content{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.icon{
-  padding: 0.5rem;
-  transition: all 1s;
-}
-
-.srchbtn{
-  border-radius: 0.6rem;
-  background-color: coral;
-  transition: all 1s;
-
-}
-
-.srchbtn:hover{
-  background-color: rgb(70, 19, 0);
-  color: azure;
-}
-
-.srchbtn:hover .icon{
-  transform: scale(1.1);
-}
-
-input{
-  background-color: coral;
-  color: black;
-  border-radius: 0.6rem;
-  border: none;
-  padding: 0.4rem;
-  
-}
-
-::placeholder{
-  color: black;
-}
-
-.mb{
-  margin-bottom: 0.5rem;
-}
-
-img{
-  border-radius: 0.8rem;
-}
-
-p{
-  font-size: 1.2rem;
-  padding: 0.2rem;
-}
-
-/* loading icon css */
-.main{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.box1,.box2{
-  width: 100px;
-  height: 100px;
-  border-radius: 50px; 
-  border: 15px solid #851e3e;
+.abso {
   position: absolute;
 }
-.box1{
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-animation-name: anim ;
-animation-duration: 1s;
-animation-iteration-count: infinite;
+
+.container {
+  width: 20rem;
+  height: 24rem;
 }
-@keyframes anim {
-  0%{
-transform: rotate(0deg);
-  }
-  100%{
-      transform: rotate(180deg);
-  }
+.rw{
+  background-color: burlywood;
+  display: flex;
+  justify-content: flex-start;
+
+}
+.nodisplay{
+  display: none;
+}
+.rotate {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: initial;
 }
 
-.box2{
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  animation-name: anim2 ;
-animation-duration: 1s;
-animation-iteration-count: infinite;
-}
-
-@keyframes anim2 {
-  0%{
-transform: rotate(0deg);
+@keyframes rotate {
+  from {
+    transform: rotate3d(1, 1, 1, 0deg);
   }
-  100%{
-      transform: rotate(180deg);
-  }
-}
-.dot{
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  animation: anim3 1.2s linear infinite;
-  background-color: #e7d3d3;
-}
-@keyframes anim3 {
-  0%,100%{
-      transform: scale(0.4);
-      opacity: 0.2;
-  }
-  50%{
-      transform: scale(1);
-      opacity: 1;
+  to {
+    transform: rotate3d(1, 1, 1, 360deg);
   }
 }
