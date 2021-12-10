@@ -8,6 +8,7 @@ import dealerwon from "../Sounds/dealerwon.mp3";
 import playerwin from "../Sounds/playerwin.mp3";
 
 const Deck = () => {
+  const [cards, setcards] = useState(["0", "1", "2", "3", "4", "5"]);
   const [cardtype, setcardtype] = useState([]);
   const [slidedown, setslidedown] = useState(false);
   const [turnup, setturnup] = useState(false);
@@ -118,7 +119,7 @@ const Deck = () => {
     const Winner = tempwinner.map((e) => {
       return e[e.length - 1] === "." ? e.slice(1, 2) : e.slice(-2);
     });
-    console.log(`tempwinner: ${tempwinner}`)
+    console.log(`tempwinner: ${tempwinner}`);
     console.log(Winner);
     var audio;
     var maxi = 0; //As max value is at index 0
@@ -366,43 +367,17 @@ const Deck = () => {
         <div className="row mt-2 ">
           <div className="col-10 col-lg-3 col-md-3 mleft  ">
             <img src={cardback} className="img-fluid abso deck" alt="card" />
-
-            <img
-              src={cardback}
-              className="img-fluid abso tmp "
-              id="0"
-              alt="card"
-            />
-            <img
-              src={cardback}
-              className="img-fluid abso tmp"
-              id="1"
-              alt="card"
-            />
-            <img
-              src={cardback}
-              className="img-fluid abso tmp"
-              id="2"
-              alt="card"
-            />
-            <img
-              src={cardback}
-              className="img-fluid abso tmp"
-              id="3"
-              alt="card"
-            />
-            <img
-              src={cardback}
-              className="img-fluid abso tmp"
-              id="4"
-              alt="card"
-            />
-            <img
-              src={cardback}
-              className="img-fluid abso tmp"
-              id="5"
-              alt="card"
-            />
+            {cards.map((e, i) => {
+              return (
+                <img
+                  key={i + 1000}
+                  src={cardback}
+                  className="img-fluid abso tmp "
+                  id={e}
+                  alt="card"
+                />
+              );
+            })}
           </div>
         </div>
       </div>
