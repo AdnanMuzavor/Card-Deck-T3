@@ -80,3 +80,28 @@ h6 {
     transform: rotate3d(1, 1, 1, 360deg);
   }
 }
+
+.mleft{
+  margin-left: 28rem !important;
+}
+
+.win{
+  background-color: brown;
+  transform: translate(0,-2rem);
+  
+  
+}
+.notwon{
+  opacity: 0.4;
+}
+
+.status{
+  text-align: center;
+  background-color: brown;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+.notvisible{
+  visibility:0;
+  opacity: 0;
+}

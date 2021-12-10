@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+
 import Deck from "../components/CardDeck";
 const HomeScreen = () => {
   return (
