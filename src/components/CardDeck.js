@@ -36,13 +36,20 @@ const Deck = () => {
       // getcard[i].classList.add(`translate${i}`);
 
       //Method-1
-      if (i < 5) {
-        getcard[i].style.marginTop = "20rem";
-        getcard[i].style.marginLeft = `${i * 10}rem`;
-      } else {
-        getcard[i].style.marginTop = "20rem";
-        getcard[i].style.marginLeft = `${-15}rem`;
+      if(i!=5){
+        if (i < 5) {
+          getcard[i].style.marginTop = "26rem";
+          getcard[i].style.marginLeft = `${i * 10}rem`;
+        } else {
+          getcard[i].style.marginTop = "26rem";
+          getcard[i].style.marginLeft = `${10}rem`;
+        }
       }
+      else{
+        getcard[i].style.marginTop = "14rem";
+        getcard[i].style.marginLeft = `${0}rem`;
+      }
+    
     }
   };
 

@@ -23,8 +23,8 @@ h6 {
 }
 
 .img-fluid {
-  width: 10rem !important;
-  height: 15rem !important;
+  width: 6rem !important;
+  height: 10rem !important;
 
   transition: all 2s;
 }
@@ -82,7 +82,7 @@ h6 {
 }
 
 .mleft{
-  margin-left: 28rem !important;
+  margin-left: 34rem !important;
 }
 
 .win{
